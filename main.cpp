@@ -93,7 +93,7 @@ unsigned long long BitRook(int cell)
 
 unsigned long long BitBishop(int cell) {
 
-    unsigned long long M;
+    unsigned long long M = 0ULL;
     unsigned long long K = 1ULL << cell;
 
     unsigned long long Ka = 0xfefefefefefefefeULL;
@@ -140,8 +140,6 @@ unsigned long long BitBishop(int cell) {
 
 unsigned long long BitQueen(int cell)
 {
-    unsigned long long K = 1ULL << cell;
-
     unsigned long long M1 = BitBishop(cell);
     unsigned long long M2 = BitRook(cell);
 
